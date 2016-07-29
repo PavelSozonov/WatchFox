@@ -19,7 +19,6 @@ SOURCES += src/WatchFox.cpp
 OTHER_FILES += qml/WatchFox.qml \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
     rpm/WatchFox.changes.in \
     rpm/WatchFox.spec \
     rpm/WatchFox.yaml \
@@ -37,4 +36,7 @@ CONFIG += sailfishapp_i18n
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/WatchFox-de.ts
+
+DISTFILES += \
+    qml/pages/TransitionDialog.qml
 

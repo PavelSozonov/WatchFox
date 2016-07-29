@@ -31,7 +31,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-
 Page {
     id: page
 
@@ -44,15 +43,11 @@ Page {
             anchors.horizontalCenter: parent.horizontalCenter
             onClicked: {
                 var dialog =
-                    pageStack.push(Qt.resolvedUrl("../dialogs/TrnsitionDialog.qml"),
-                        {"name": header.title});
+                    pageStack.push(Qt.resolvedUrl("./TransitionDialog.qml"),
+                        {});
                 dialog.accepted.connect(function() {
                     header.title = "safe mode";
                 });
-                dialog.canceled.connect(function() {
-                    header.title = "unsafe mode";
-                });
-                enabled:false;
             }
         }
     }
