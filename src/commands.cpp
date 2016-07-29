@@ -12,6 +12,7 @@ int Commands::switchWorld(QString password,QString alias, QString devicePath){
 //   int open = system("bash -c \" echo 'crypt' | sudo cryptsetup luksOpen /dev/mmcblk1p2 crypt \"");
    int mount = system("sudo mount /dev/mapper/crypt /home");
    int restart = system("systemctl --user restart ambienced");
+   return 0;
 }
 
 bool Commands::isInSafeMode(){
@@ -35,6 +36,7 @@ int Commands::createCryptHome(QString password,QString devicePath){
     system("cp -a /home/nemo /tmp/crypt/nemo");
     system("umount -l /tmp/crypt");
     system("sudo cryptsetup luksClose crypt");
+    return 0;
 }
 
 
