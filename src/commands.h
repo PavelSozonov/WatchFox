@@ -15,6 +15,7 @@ public slots:
     int switchWorld(QString password,QString alias, QString mountpoint);
     bool isInSafeMode();
     bool hasFlash();
+    int createCryptHome(QString password,QString devicePath);
 };
 
 #endif // COMMANDS_H
