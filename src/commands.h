@@ -12,7 +12,7 @@ public:
 signals:
 
 public slots:
-    int Commands::switchWorld(QString password,QString alias, QString mountpoint);
+    int switchWorld(QString password,QString alias, QString mountpoint);
 };
 
 #endif // COMMANDS_H
