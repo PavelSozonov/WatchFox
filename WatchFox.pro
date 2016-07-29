@@ -39,7 +39,8 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/WatchFox-de.ts
 
 DISTFILES += \
-    qml/pages/TransitionDialog.qml
+    qml/pages/TransitionDialog.qml \
+    qml/pages/AuntificationPage.qml
 
 HEADERS += \
     src/commands.h
