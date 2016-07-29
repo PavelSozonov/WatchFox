@@ -40,7 +40,7 @@ TRANSLATIONS += translations/WatchFox-de.ts
 
 DISTFILES += \
     qml/pages/TransitionDialog.qml \
-    qml/pages/AuntificationPage.qml
+    qml/pages/AuthenticationPage.qml
 
 HEADERS += \
     src/commands.h
