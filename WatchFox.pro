@@ -14,7 +14,8 @@ TARGET = WatchFox
 
 CONFIG += sailfishapp
 
-SOURCES += src/WatchFox.cpp
+SOURCES += src/WatchFox.cpp \
+    src/commands.cpp
 
 OTHER_FILES += qml/WatchFox.qml \
     qml/cover/CoverPage.qml \
@@ -39,4 +40,7 @@ TRANSLATIONS += translations/WatchFox-de.ts
 
 DISTFILES += \
     qml/pages/TransitionDialog.qml
+
+HEADERS += \
+    src/commands.h
 

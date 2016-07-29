@@ -33,7 +33,7 @@
 #endif
 
 #include <sailfishapp.h>
-
+#include "commands.h"
 
 int main(int argc, char *argv[])
 {
@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
     //
     // To display the view, call "show()" (will show fullscreen on device).
 
+    qmlRegisterType<Commands>("org.inno.commands",1,0,"Commands");
     return SailfishApp::main(argc, argv);
 }
 
