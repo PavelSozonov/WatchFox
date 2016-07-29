@@ -14,3 +14,9 @@ bool Commands::isInSafeMode(){
     int inSafeMode = system("bash -c \"(ls /dev/mapper/ | grep crypt) && (mount | grep /dev/mapper/crypt)\"");
     return inSafeMode == 0;
 }
+
+
+bool Commands::hasFlash(){
+    int hasFlash = system("bash -c \"ls /dev/ | grep mmcblk1\"");
+    return hasFlash == 0;
+}

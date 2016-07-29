@@ -14,6 +14,7 @@ signals:
 public slots:
     int switchWorld(QString password,QString alias, QString mountpoint);
     bool isInSafeMode();
+    bool hasFlash();
 };
 
 #endif // COMMANDS_H
