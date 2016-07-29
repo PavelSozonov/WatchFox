@@ -14,5 +14,8 @@ Dialog {
             text: "After accepting, you won't be able to go back without rebooting"
             wrapMode: Text.WrapAnywhere
         }
+
     }
+
+    onDone: if (result == DialogResult.Accepted) {}
 }

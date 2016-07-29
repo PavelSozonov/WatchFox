@@ -31,27 +31,32 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
+
 Page {
     id: page
-
-    Column {
+    SilicaListView {
+        id: listView
+        model: 20
         anchors.fill: parent
-
-        PageHeader { id: header; title: "unsafe mode"}
-        Button {
-            text: qsTr("Go to safemode")
-            anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: {
-                var dialog =
-                    pageStack.push(Qt.resolvedUrl("./TransitionDialog.qml"),
-                        {});
-                dialog.accepted.connect(function() {
-                    header.title = "safe mode";
-                });
-            }
-            visible: header.title == "unsafe mode"
+        header: PageHeader {
+            title: qsTr("Nested Page")
         }
+        delegate: BackgroundItem {
+            id: delegate
+
+            Label {
+                x: Theme.paddingLarge
+                text: qsTr("Item") + " " + index
+                anchors.verticalCenter: parent.verticalCenter
+                color: delegate.highlighted ? Theme.highlightColor : Theme.primaryColor
+            }
+            onClicked: console.log("Clicked " + index)
+        }
+        VerticalScrollDecorator {}
     }
 }
+
+
+
 
 
