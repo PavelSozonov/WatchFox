@@ -30,14 +30,19 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import org.inno.commands 1.0
 
 Page {
     id: page
 
+    Commands{
+        id : commands
+    }
+
     Column {
         anchors.fill: parent
 
-        PageHeader { id: header; title: "unsafe mode"}
+        PageHeader { id: header; title: (commands.isInSafeMode())?"safe mode":"unsafe mode"}
         Button {
             text: qsTr("Go to safemode")
             anchors.horizontalCenter: parent.horizontalCenter
