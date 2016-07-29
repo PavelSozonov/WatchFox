@@ -9,10 +9,13 @@ Dialog {
 
         DialogHeader { }
         Label {
-            anchors.centerIn: parent
-            width: applicationWindow.width
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width
             text: "After accepting, you won't be able to go back without rebooting"
-            wrapMode: Text.WrapAnywhere
+            wrapMode: Text.WordWrap
         }
+
     }
+
+    onDone: if (result == DialogResult.Accepted) {}
 }
